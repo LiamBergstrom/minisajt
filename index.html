@@ -9,15 +9,23 @@
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
   </head>
   <body>
-    <nav>
-      <ul class="container" id="menu" style="list-style-type: none">
-        <li>Home</li>
-        <li>Profile</li>
-        <li class="search">
-          <input type="text" class="search-input" placeholder="Search" />
-        </li>
-        <li>Logout</li>
+  <nav role="navigation">
+    <h1> Liam's Newspage</h1>
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a href="index.html"><li>Home</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Info</li></a>
+        <a href="#"><li>Contact</li></a>
+        <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
       </ul>
-    </nav>
-  </body>
+    </div>
+
+   
+  </nav>
+  <body>
 </html>
