@@ -4,7 +4,7 @@
 }
 
 html {
-  width: 100%;
+  margin: 0;
 }
 
 .container {
@@ -12,7 +12,7 @@ html {
   justify-content: space-between;
   background-color: gold;
   padding: 10px;
-  width: 100%;
+  height: 1300px;
 }
 
 .search {
@@ -37,6 +37,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
 
   /* make it look decent enough */
   background: #232323;
@@ -45,15 +46,22 @@ body {
 }
 
 nav {
-  top: 0px;
+  display: block;
+  top: 0;
+  position: -webkit-sticky;
   position: sticky;
   height: 60px;
+  width: 100%;
   background: #123133;
+  z-index: 9999;
 }
 
 h1 {
+  position: relative;
   color: #fff;
-  margin-left: 10px;
+  margin-left: 5%;
+  transform: translate(0 -50%);
+  width: 10%;
 }
 
 #searchBox {
@@ -64,10 +72,12 @@ h1 {
 #menuToggle {
   display: block;
   position: relative;
-  top: -5px;
-  left: 95%;
-
+  top: -40px;
+  right: -95%;
+  width: 40px;
   z-index: 1;
+
+  /* Behövs margin? */
 
   -webkit-user-select: none;
   user-select: none;
@@ -85,7 +95,8 @@ h1 {
 }
 
 #menuToggle input {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 40px;
   height: 32px;
   position: absolute;
@@ -101,7 +112,8 @@ h1 {
 }
 
 #menuToggle span {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
@@ -117,12 +129,12 @@ h1 {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 #menu {
-  position: absolute;
+  position: relative; /* fuckade allt */
   width: 100%;
-  margin: -475px 0 0 100px;
+  margin: -475px 0 0 100px; /* behövs placeras bättre (utanför skärm) */
   padding: 50px;
   padding-top: 125px;
-
+  left: -150px;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 
@@ -137,7 +149,13 @@ h1 {
   font-size: 22px;
   color: #fff;
   text-align: right;
-  margin-right: 70px;
+  margin-left: 0px;
+
+  width: 100px;
+}
+
+#menu ul a:hover {
+  color: tomato;
 }
 
 #menuToggle input:checked ~ ul {
