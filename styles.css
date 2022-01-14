@@ -11,8 +11,10 @@ html {
   display: flex;
   justify-content: space-between;
   background-color: gold;
+
   padding: 10px;
-  height: 1300px;
+  height: 1800px;
+  margin-top: 60px;
 }
 
 .search {
@@ -37,7 +39,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 
   /* make it look decent enough */
   background: #232323;
@@ -48,8 +50,7 @@ body {
 nav {
   display: block;
   top: 0;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   height: 60px;
   width: 100%;
   background: #123133;
@@ -76,7 +77,7 @@ h1 {
   right: -95%;
   width: 40px;
   z-index: 1;
-
+  margin-right: 10px;
   /* Behövs margin? */
 
   -webkit-user-select: none;
@@ -91,7 +92,7 @@ h1 {
 }
 
 #menuToggle a:hover {
-  color: tomato;
+  color: tomato; /* funkar inte */
 }
 
 #menuToggle input {
@@ -102,7 +103,6 @@ h1 {
   position: absolute;
   top: -7px;
   left: -5px;
-
   cursor: pointer;
 
   opacity: 0;
@@ -129,9 +129,9 @@ h1 {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 #menu {
-  position: relative; /* fuckade allt */
+  position: relative;
   width: 100%;
-  margin: -475px 0 0 100px; /* behövs placeras bättre (utanför skärm) */
+  margin: -475px 0 0 100px;
   padding: 50px;
   padding-top: 125px;
   left: -150px;
@@ -159,7 +159,7 @@ h1 {
 }
 
 #menuToggle input:checked ~ ul {
-  transform: translate(-100%, 100%);
+  transform: translate(-100%, 85%);
 }
 
 #menuToggle span:first-child {
@@ -183,4 +183,43 @@ h1 {
 
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
+}
+
+h2 {
+  position: absolute;
+  top: 150px;
+  left: 25%;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #232323;
+}
+
+.daily {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 1000px;
+}
+
+#daily {
+width: 100%
+}
+
+#nfts {
+  width: 100%;
+  margin-left: 10px
+}
+
+#nasdaq {
+  margin-top: 15px;
+  width: 100%;
+  margin-left: 10px
+}
+
+#tech {
+  margin-top: 15px;
+  width: 100%;
+  margin-left: 10px
+ 
 }
